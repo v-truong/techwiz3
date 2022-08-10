@@ -260,12 +260,12 @@ const app = {
             <div class="col-sm-3">
                 <div class="product">
                     <div class="product-img-info">
-                        <a href="" class="product__link">
-                            <img src="${product.images}" class="product__img" alt="">
+                        <!--a href="" class="product__link"-->
+                            <img src="${product.images}" class="product__img" alt="" onclick='alert("ten san pham: ${product.id}")'>
                             <div class="product__sale">
                                 SALE!
                             </div>
-                        </a>
+                        <!--/a-->
                         <div class="item-box-hover">
                             <div class="cart-wrap">
                                 <i class="fas fa-shopping-cart"></i> ADD TO CART
@@ -303,8 +303,8 @@ const app = {
         `;
     });
     $(".product--container").innerHTML = htmls.join("");
-    // $('.product-index').innerHTML = htmls.join('');
-    $('.product').innerHTML = htmls.join('');
+    
+  
   },
 
 
