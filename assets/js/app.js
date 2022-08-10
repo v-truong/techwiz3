@@ -254,63 +254,41 @@ const app = {
   ],
  
 
-  renderProduct: function () {
-    const htmls = this.products.map((product) => {
-      return `
-            <div class="col-sm-3">
-                <div class="product">
-                    <div class="product-img-info">
-                        <a href="" class="product__link">
-                            <img src="${product.images}" class="product__img" alt="">
-                            <div class="product__sale">
-                                SALE!
-                            </div>
-                        </a>
-                        <div class="item-box-hover">
-                            <div class="cart-wrap">
-                                <i class="fas fa-shopping-cart"></i> ADD TO CART
-                            </div>
-                            <div class="box-inner v-center">
-                                <a href="" class="box-inner__item wishlist">
-                                    <i class="fas fa-heart"></i>
-                                    <div class="icon-script">Add to Wishlist</div>
-                                </a>
-                                <a href="" class="box-inner__item compare">
-                                    <i class="fas fa-random"></i>
-                                    <div class="icon-script">Compare</div>
 
-                                </a>
-                                <a href="" class="box-inner__item view">
-                                    <i class="fas fa-eye"></i>
-                                    <div class="icon-script">Quick View</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" class="product__name">${product.title}</a>
-                    <div class="product__price">
-                        <span class="old-price">${product.price}</span>
-                    </div>
-                    <div class="product__rating">
-                        <i class="far fa-star fas fa-star--gold"></i>
-                        <i class="far fa-star fas fa-star--gold"></i>
-                        <i class="fas fa-star fas fa-star--gold"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
+
+  renderIndex: function(){
+    const productIndex = this.products.map((productA) => {
+        return `
+            <div class="card-1">
+            <span class="like"><i class="fas fa-heart"></i></span>
+            <span class="cart"><i class="fas fa-cart-arrow-down"></i></span>
+            <div class="card__img">
+                <img src="${productA.images}" alt="" />
+            </div>
+            <h2 class="card__title">${productA.title}</h2>
+            <p class="card__price">${productA.price}</p>
+            <div class="card__size">
+                <h3>Size:</h3>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+            </div>
+            
+            <div class="card__action">
+                <button>Buy now</button>
+                <button>Add cart</button>
+            </div>
         </div>
-        `;
+    `
     });
-    $(".product--container").innerHTML = htmls.join("");
-    // $('.product-index').innerHTML = htmls.join('');
-    $('.product').innerHTML = htmls.join('');
+   
+    $('.product-index').innerHTML = productIndex.join('');
+  
   },
 
-
   start: function () {
-      this.renderProduct();
-     
+      this.renderIndex();
     
   },
 };
