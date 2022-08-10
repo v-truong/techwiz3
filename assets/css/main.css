@@ -1209,7 +1209,10 @@ h3 {
     position: relative;
     overflow: hidden;
 }
-
+.product--container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .products .product .product-img-info .product__link {
     position: relative;
     overflow: hidden;
@@ -2732,7 +2735,7 @@ h3 {
 
 /* Detail Category */
 
-container-nav {
+.container-nav {
     display: flex;
 }
 
