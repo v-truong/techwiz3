@@ -237,3 +237,9 @@ $(window).scroll(function() {
 $('.move-on-top-btn').click(function() {
     $('html, body').animate({ scrollTop: 0 }, 1500);
 });
+
+// Button Header
+document.querySelector('.search-btn').addEventListener('click', function () {
+	this.parentElement.classList.toggle('open')
+	this.previousElementSibling.focus()
+})
